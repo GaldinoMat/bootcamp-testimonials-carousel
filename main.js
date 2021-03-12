@@ -22,7 +22,7 @@ document.getElementById("previous-slide").addEventListener("click", () => {
 
 function movePreviousSlide() {
   if (slidePosition === 0) {
-    slidePosition = 0;
+    slidePosition = length - 1;
   } else {
     slidePosition--;
   }
@@ -36,4 +36,5 @@ function updateSlide() {
   }
 
   cards[slidePosition].classList.add("card--visible");
+  cards[slidePosition].classList.remove("card--invisible");
 }
